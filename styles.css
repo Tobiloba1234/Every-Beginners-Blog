@@ -1,0 +1,318 @@
+body{
+    margin:0;
+    padding:0;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main{
+    background-color: #ffe6f4;
+}
+
+/* Typography */
+h1,h2,p{
+  /* color: #7e3d3d; */
+  color: #171625;
+}
+
+h1,h2{
+    font-weight:700;
+}
+h1{
+    font-size:2.5rem;
+}
+
+h2{
+    font-size:2rem;
+    
+}
+
+p{
+    font-size:1.125rem;
+}
+li,a{
+    list-style: none;
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size:1rem;
+}
+ul{
+   
+   gap:1em;
+}
+
+
+/****Layout****/
+.header,.first-header,.nav-list{
+    display:flex; 
+}
+
+.header{
+    justify-content:space-between;
+    align-items:center;
+    padding:.5em;
+    background-color: #ffe6f4;
+    color:#171625
+    
+}
+
+.first-header{
+
+    align-items: center;
+}
+.header-title{
+     font-size:1.2rem;
+     margin-left:.7em;
+    
+}
+
+.fa-phone{
+    font-size: 1rem;
+    
+}
+
+.fa-bars{
+    font-size:1.5rem;
+}
+
+
+.menu-item{
+    display:none;
+    border-bottom: 2px solid #000
+
+}
+
+.show{
+    display:block;
+}
+
+
+.hero-section{
+    background-image: url('images/hut.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:grid;
+    grid-template-rows:repeat(3,1fr);
+    padding:4em 1.125em;
+    height:40vh;
+    
+
+}
+
+.hero-date,.hero-title,.hero-text{
+    margin:0;
+    width:80%;
+    text-shadow: 2px 1px 7px #ada7a7;
+    color:white;
+}
+
+.hero-date{
+    font-size:.9rem;
+}
+.hero-title{
+    margin-bottom:.5em;
+}
+
+.hero-text{
+    font-size:1.125rem;
+}
+  
+.blogs{
+    display:grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+    "blog-one"
+    "blog-two"
+    "blog-three"
+    "blog-four"
+    "blog-five"
+    "blog-six";
+    margin:1em;
+    gap:1em;
+    background-color: #ffe6f4;
+}
+
+.blog-date{
+    color:#171625;
+}
+.blog-one{
+grid-area:blog-one;
+
+}
+
+.blog-two{
+    grid-area:blog-two;
+    
+}
+
+.blog-three{
+    grid-area:blog-three;
+    
+}
+
+.blog-four{
+    grid-area:blog-four;
+    
+}
+
+.blog-five{
+    grid-area:blog-five;
+    
+}
+
+
+.blog-six{
+    grid-area:blog-six;
+    
+}
+.blog-image{
+    height:350px;
+    width:100%;
+    object-fit: cover;
+    border-radius:3px;
+
+}
+
+.page-view{
+    text-align:center;
+    font-weight:bold;
+    text-decoration:underline;
+    cursor: pointer;
+    margin-top:0em;
+}
+
+/* Contact Page-Form */
+.container{
+    display:block;
+    width:90%;
+    max-width:800px;
+    margin:0 auto;
+}
+form{
+   display:flex;
+   flex-direction: column;
+   
+
+}
+
+
+input{
+    width:70%;
+    padding:1em;
+    margin:1em;
+    border-radius:4px;
+}
+/* Footer */
+footer{
+    background-color: #beabe2;
+    color:white;
+    padding:1em;
+    text-align:center;
+}
+.copyright{
+    margin-bottom:0;
+}
+
+.social{
+    margin-right:1.5em;
+    margin-left:1.5em;
+    color:#beabe2;
+    font-size:1.5rem;
+    
+}
+
+.social:hover{
+    color:antiquewhite;
+}
+@media(min-width:400px){
+   .hero-section{
+     height:60vh;
+   }
+
+   .hero-title{
+     font-size:2.7rem;
+   }
+}
+
+@media(min-width:639px) {
+    main{
+        background-color: #beabe2;
+    }
+    
+    .menu-items{
+        display:flex;
+     
+    }
+    .menu-item{
+        display:block;
+        border:none;
+    }
+    #bars{
+        display:none;
+
+    }
+    .blogs{
+        display:grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "blog-one blog-two  "
+        "blog-three blog-four"
+        "blog-five  blog-six";
+        padding:1em;
+        gap:1em;
+        background-color: #beabe2;
+        
+    }
+
+    .blog-image{
+        height:250px;
+        width:100%;
+        object-fit: cover;
+        border-radius:3px;
+    
+    }
+
+    footer{
+        background-color: #171625;
+    }
+
+    footer p{
+        
+        color:#ffe6f4;
+        
+    }
+
+}
+
+@media(min-width:650px){
+    
+
+
+}
+@media(min-width:1000px) {
+    main{
+        background-color: #ffe6f4;
+    }
+    .blogs{
+        display:grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "blog-one blog-two blog-three"
+        "blog-four blog-five blog-six";
+        padding:2em;
+        gap:1em;
+        background-color: #ffe6f4;
+        
+    }
+
+    
+    footer{
+        background-color: #beabe2;
+    }
+
+}
